@@ -13,6 +13,16 @@ class App extends Component {
       { id: 4, value: 0 },
     ],
   };
+
+  constructor(props) {
+    super();
+    console.log("App Constructor", this.props);
+  }
+
+  componentDidMount() {
+    console.log("App Mounted");
+  }
+
   handleReset = () => {
     this.state.counters.map((c) => {
       c.value = 0;
@@ -31,6 +41,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("App Rendered");
     return (
       <React.Fragment>
         <NavBar
